@@ -4,7 +4,7 @@ var express = require('express');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
-const config = require('./config/default');
+var config = require('./config/default');
 var routes = require('./routes');
 var pkg = require('./package');
 
@@ -58,5 +58,5 @@ routes(app);
 
 // 监听端口，启动程序
 app.listen(config.port, function () {
-  console.log(`${pkg.name} listening on port ${config.port}`);
+  console.log('${pkg.name} listening on port ${config.port}');
 });
